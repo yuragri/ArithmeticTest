@@ -1,0 +1,19 @@
+﻿<Window x:Class="ArithmeticWPF.History"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ArithmeticWPF"
+        mc:Ignorable="d"
+        Title="History" Height="400" Width="400"
+        DataContext="HistoryDataContext">
+    <DataGrid Name="dgHistory" AutoGenerateColumns="False" ItemsSource="{Binding HistoryList}">
+        <DataGrid.Columns>
+
+            <DataGridTextColumn Header="Date" Width="*" Binding="{Binding Date}" />
+            <DataGridTextColumn Header="Expression" Width="*" Binding="{Binding Express}" />
+            <DataGridTextColumn Header="Result" Width="*" Binding="{Binding Result}" />
+
+        </DataGrid.Columns>
+    </DataGrid>
+</Window>
